@@ -13,8 +13,7 @@ class ActionView::Helpers::InstanceTag
 
   def to_radio_button_enum_tag(options = {})
     values_for_enum_tag.map do |val|
-      radio_button = to_radio_button_tag(val.last, options)
-      [ radio_button, to_label_tag(val.first, :for => radio_button.match(/ id="(.*?)"/)[1]) ] * $/
+      [ to_radio_button_tag(val.last, options), to_label_tag(val.first, :value => val.last) ] * $/
     end.join($/)
   end
 

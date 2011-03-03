@@ -5,5 +5,6 @@ doc/
 coverage/
 .DS_Store
 .dotest
+.rvmrc
 log/*
 spec/rails_root/log/*
